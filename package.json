@@ -1,0 +1,23 @@
+{
+  "name": "zendesk",
+  "version": "1.0.0",
+  "description": "attendance on demand zendesk config",
+  "main": "script.js",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maulpets/zendesk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maulpets/zendesk/issues"
+  },
+  "homepage": "https://github.com/maulpets/zendesk#readme"
+}
