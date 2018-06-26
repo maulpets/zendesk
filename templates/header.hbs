@@ -1,15 +1,27 @@
-<header class="header">
-  <div class="logo">
-    {{#link 'help_center'}}
-      <img src="{{settings.logo}}" alt="{{t 'logo'}}">
-    {{/link}}
-  </div>
-  <nav class="nav-wrapper">
-    <span class="icon-menu"></span>
-    <div class="user-nav" id="user-nav">
-      {{link 'community'}}
-      {{link 'new_request' class='submit-a-request'}}
+<header class="header-main">
+  <nav>
+    <div class="nav-wrapper ">
+      {{#link 'help_center' class="brand-logo"}}   <img hieght="100%" width="100%" src="{{asset 'AOD_Circles.svg'}}" alt=""> {{/link}}
+      <div class="search-bar-wrapper">
+        {{search submit=false instant=true class='search-bar'}}
+      </div>
+      <div class="user-info-wrapper">
+        {{user_info}}
+      </div>
     </div>
-    {{user_info}}
+  </nav>
+</header>
+
+<header class="header-category hidden">
+  <nav>
+    <div class="nav-wrapper ">
+      {{#link 'help_center' class="brand-logo"}}   <img hieght="100%" width="100%" src="{{asset 'AOD_Circles.svg'}}" alt=""> {{/link}}
+      <div class="search-bar-wrapper">
+        {{search submit=false instant=true class='search-bar'}}
+      </div>
+      <div class="user-info-wrapper">
+        {{user_info}}
+      </div>
+    </div>
   </nav>
 </header>

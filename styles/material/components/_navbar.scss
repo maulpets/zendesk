@@ -15,7 +15,7 @@ nav {
 
   color: $navbar-font-color;
   @extend .z-depth-1;
-  background-color: $primary-color;
+  background-color: white;
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
@@ -63,6 +63,8 @@ nav {
     display: inline-block;
     font-size: $navbar-brand-font-size;
     padding: 0;
+    max-height: 100%;
+    width: 50px;
 
     &.center {
       left: 50%;
@@ -105,7 +107,59 @@ nav {
     font-size: 32px;
     padding: 28px 0;
   }
+  //search Bar
+  .search-bar-wrapper{
+    @extend %center-aboslute;
+    padding: 0 30px;
+    border-radius: 20px;
+    width: 50%;
+    height: 40px;
+    background-color: rgba(0,0,0,.01);
 
+    #query{
+      height: 2em;
+      border: none;
+      @extend %center-vert;
+      margin: 0;
+
+      &:focus{
+        box-shadow:none;
+      }
+    }
+    &:after{
+      //ADD SEARCH ICON
+      position: relative;
+      top: 0;
+      right: 0;
+      font-family: 'Material Icons';
+      content: '\E313';
+    }
+  }
+  .user-info-wrapper{
+    right: 0;
+    position: absolute;
+    padding: 14px;
+    .user-info{
+
+      .btn{
+        background-color: $primary-color;
+        display: flex;
+        #user-name{
+
+        }
+
+        .user-avatar{
+          height: 100%;
+        }
+      }
+      #user-menu {
+        a{
+          line-height: 34px;
+        }
+
+      }
+    }
+  }
 
   // Navbar Links
   ul {

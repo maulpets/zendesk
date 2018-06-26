@@ -1,7 +1,7 @@
-{  
+{
    "article":{
       "title":"Uploaded via cURL cli",
-      "body":"$ curl https://attendanceondemand.zendesk.com/api/v2/help_center/sections/360001209092/articles.json ^ -d @test.txt ^ -H Content-Type: application/json ^ -v -u paul.mets@attendanceondemand.com:Mets3906",
+      "body":"$ curl https://attendanceondemand.zendesk.com/api/v2/help_center/sections/360001209092/articles.json -d @test.txt ^ -H Content-Type: application/json ^ -v -u paul.mets@attendanceondemand.com:Mets3906",
       "locale":"en-us"
    }
 }
