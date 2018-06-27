@@ -1,0 +1,8 @@
+{
+ "category": {
+	"position": 2, 
+	"locale": "en-us", 
+	"name": "Test-Section",
+	"description": "This is a test"
+	}
+}

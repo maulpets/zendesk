@@ -1,9 +1,8 @@
 <div class="container-divider"></div>
 <div class="container">
-  <nav class="sub-nav">
+  <div class="sub-nav">
     {{breadcrumbs}}
-    {{search scoped=true submit=false}}
-  </nav>
+  </div>
 
   <div class="article-container" id="article-container">
     <section class="article-sidebar">
@@ -30,30 +29,7 @@
             <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
-
-        <div class="article-author">
-          <div class="avatar article-avatar">
-            {{#if article.author.agent}}
-              <span class="icon-agent"></span>
-            {{/if}}
-            <img src="{{article.author.avatar_url}}" alt="Avatar" class="user-avatar"/>
-          </div>
-          <div class="article-meta">
-            {{#link 'user_profile' id=article.author.id}}
-              {{article.author.name}}
-            {{/link}}
-
-            <ul class="meta-group">
-              {{#is article.created_at article.edited_at}}
-                <li class="meta-data">{{date article.created_at timeago=true}}</li>
-              {{else}}
-                <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-                <li class="meta-data">{{t 'updated'}}</li>
-              {{/is}}
-            </ul>
-          </div>
-        </div>
-        {{subscribe}}
+        {{!-- {{subscribe}} --}}
       </header>
 
       <section class="article-info">
@@ -78,7 +54,7 @@
 
       <footer>
         <div class="article-footer">
-          <div class="article-share">{{share}}</div>
+          {{!-- <div class="article-share">{{share}}</div> --}}
           {{#if comments}}
             <a href="#article-comments" class="article-comment-count">
               <span class="icon-comments"></span>
@@ -86,7 +62,7 @@
             </a>
           {{/if}}
         </div>
-        {{#with article}}
+        {{!-- {{#with article}}
           <div class="article-votes">
             <span class="article-votes-question">{{t 'was_this_article_helpful'}}</span>
             <div class="article-votes-controls" role='radiogroup'>
@@ -97,7 +73,7 @@
               {{vote 'label' class='article-vote-label'}}
             </small>
           </div>
-        {{/with}}
+        {{/with}} --}}
 
         <div class="article-more-questions">
           {{request_callout}}

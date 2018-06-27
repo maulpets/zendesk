@@ -114,25 +114,40 @@ nav {
     border-radius: 20px;
     width: 50%;
     height: 40px;
-    background-color: rgba(0,0,0,.01);
+    background-color: rgba(0,0,0,.05);
+    overflow: hidden;
+    box-sizing: content-box;
+    @include eZe(all, 200ms);
+    &.searching{
+      border: solid 1px $aodPurple;
+
+      &:after{
+        opacity: 1;
+      }
+    }
 
     #query{
       height: 2em;
       border: none;
       @extend %center-vert;
       margin: 0;
-
+      color: black;
+      width: 85%;
       &:focus{
         box-shadow:none;
       }
     }
     &:after{
       //ADD SEARCH ICON
-      position: relative;
-      top: 0;
-      right: 0;
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      font-size: 24px;
       font-family: 'Material Icons';
-      content: '\E313';
+      content: 'search';
+      color: black;
+      opacity: .6;
+      height: 100%;
     }
   }
   .user-info-wrapper{
